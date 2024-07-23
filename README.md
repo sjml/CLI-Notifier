@@ -8,7 +8,7 @@ Not running from the command line yet, but just wanted to make a little GUI that
 
 It's able to load images and attach them, but seems to align them in some weird fashion? 
 
-![bad alignment](./bad_alignment?.png)
+![bad alignment](./bad_alignment.png)
 
 More investigation needed. Or not? There is maddeningly little documentation on this kind of thing.
 
