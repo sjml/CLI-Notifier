@@ -1,0 +1,7 @@
+https://www.kodeco.com/1716-how-to-change-your-app-icon-at-build-time/page/2
+https://apple.stackexchange.com/questions/440751/is-there-a-terminal-command-to-change-app-icons
+
+0. move notification core into library
+1. get little stub exe that can call the core
+2. rename things (no spaces, shorter name)
+3. generate new app process

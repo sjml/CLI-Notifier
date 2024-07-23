@@ -6,9 +6,4 @@ Along the lines of [`terminal-notifier`](https://github.com/julienXX/terminal-no
 
 Not running from the command line yet, but just wanted to make a little GUI that did push-button notifications. Not that from clicking the button there is a two-second delay before the notification to give you time to alt-tab to another program. (macOS prevents the notification from popping if its app is already the frontmost, which makes sense!)
 
-It's able to load images and attach them, but seems to align them in some weird fashion? 
-
-![bad alignment](./bad_alignment.png)
-
-More investigation needed. Or not? There is maddeningly little documentation on this kind of thing.
-
+No pre-built artifacts because of codesigning and notarization. Short version: notifications require per-identifier permissions, but that means each identifier has to be registered with a developer account if it wants to do anything more than run on the machine that built it. So you gotta built these yourself. Sorry. Take it up with Apple. 

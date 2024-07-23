@@ -31,16 +31,16 @@ struct ContentView: View {
                     content.subtitle = "Something longer here?"
                     content.sound = UNNotificationSound.default
                     
-                    if let successUrl = urlForAsset(name: "SuccessIcon") {
-                        do {
-                            let attach = try UNNotificationAttachment(identifier: "NotificationIcon", url: successUrl, options: [UNNotificationAttachmentOptionsTypeHintKey: UTType.png])
-                            content.attachments = [attach]
-                        }
-                        catch let error {
-                            // just don't bother, but log what happened
-                            print("ERROR trying to load icon: \(error.localizedDescription)")
-                        }
-                    }
+//                    if let successUrl = urlForAsset(name: "SuccessIcon") {
+//                        do {
+//                          let attach = try UNNotificationAttachment(identifier: "NotificationIcon", url: successUrl, options: [UNNotificationAttachmentOptionsTypeHintKey: UTType.png])
+//                           content.attachments = [attach]
+//                        }
+//                        catch let error {
+//                            // just don't bother, but log what happened
+//                            print("ERROR trying to load icon: \(error.localizedDescription)")
+//                        }
+//                    }
                     
                     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
                     let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)

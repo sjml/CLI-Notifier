@@ -35,6 +35,7 @@
 		347AC83E2C4F99AD00DD5170 /* CLI_Notifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CLI_Notifier.entitlements; sourceTree = "<group>"; };
 		34CAEF692C4FAC57003AEAC1 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		34CAEF6B2C4FAC57003AEAC1 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		34E2A8822C50035C0063B89E /* CLI-Notifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CLI-Notifier-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 		347AC8342C4F99AC00DD5170 /* CLI Notifier */ = {
 			isa = PBXGroup;
 			children = (
+				34E2A8822C50035C0063B89E /* CLI-Notifier-Info.plist */,
 				347AC8352C4F99AC00DD5170 /* CLI_NotifierApp.swift */,
 				347AC8372C4F99AC00DD5170 /* ContentView.swift */,
 				347AC8392C4F99AD00DD5170 /* Assets.xcassets */,
@@ -306,6 +308,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CLI-Notifier-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -334,6 +338,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CLI-Notifier-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

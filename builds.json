@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "emoji": "✅",
+      "label": "success"
+    },
+    {
+      "emoji": "❌",
+      "label": "failure"
+    }
+  ]
+}
