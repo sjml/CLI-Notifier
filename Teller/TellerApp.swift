@@ -1,10 +1,10 @@
 import SwiftUI
 
 @main
-struct CLI_NotifierApp: App {
+struct TellerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PermissionsView()
         }
     }
 }

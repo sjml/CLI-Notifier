@@ -14,7 +14,7 @@ func urlForAsset(name: String) -> URL? {
     return url
 }
 
-struct ContentView: View {
+struct PermissionsView: View {
     @State var isAuthorized: Bool = false
     @State var errText: String = ""
     
@@ -70,5 +70,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    PermissionsView()
 }

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		347AC8362C4F99AC00DD5170 /* CLI_NotifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347AC8352C4F99AC00DD5170 /* CLI_NotifierApp.swift */; };
-		347AC8382C4F99AC00DD5170 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347AC8372C4F99AC00DD5170 /* ContentView.swift */; };
+		347AC8362C4F99AC00DD5170 /* TellerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347AC8352C4F99AC00DD5170 /* TellerApp.swift */; };
+		347AC8382C4F99AC00DD5170 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347AC8372C4F99AC00DD5170 /* PermissionsView.swift */; };
 		347AC83A2C4F99AD00DD5170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347AC8392C4F99AD00DD5170 /* Assets.xcassets */; };
 		347AC83D2C4F99AD00DD5170 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347AC83C2C4F99AD00DD5170 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -27,12 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		347AC8322C4F99AC00DD5170 /* CLI Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CLI Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		347AC8352C4F99AC00DD5170 /* CLI_NotifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLI_NotifierApp.swift; sourceTree = "<group>"; };
-		347AC8372C4F99AC00DD5170 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		347AC8322C4F99AC00DD5170 /* Teller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		347AC8352C4F99AC00DD5170 /* TellerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellerApp.swift; sourceTree = "<group>"; };
+		347AC8372C4F99AC00DD5170 /* PermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
 		347AC8392C4F99AD00DD5170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347AC83C2C4F99AD00DD5170 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		347AC83E2C4F99AD00DD5170 /* CLI_Notifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CLI_Notifier.entitlements; sourceTree = "<group>"; };
+		347AC83E2C4F99AD00DD5170 /* Teller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Teller.entitlements; sourceTree = "<group>"; };
 		34CAEF692C4FAC57003AEAC1 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		34CAEF6B2C4FAC57003AEAC1 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -51,7 +51,7 @@
 		347AC8292C4F99AC00DD5170 = {
 			isa = PBXGroup;
 			children = (
-				347AC8342C4F99AC00DD5170 /* CLI Notifier */,
+				347AC8342C4F99AC00DD5170 /* Teller */,
 				34CAEF682C4FAC57003AEAC1 /* Frameworks */,
 				347AC8332C4F99AC00DD5170 /* Products */,
 			);
@@ -60,21 +60,21 @@
 		347AC8332C4F99AC00DD5170 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				347AC8322C4F99AC00DD5170 /* CLI Notifier.app */,
+				347AC8322C4F99AC00DD5170 /* Teller.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		347AC8342C4F99AC00DD5170 /* CLI Notifier */ = {
+		347AC8342C4F99AC00DD5170 /* Teller */ = {
 			isa = PBXGroup;
 			children = (
-				347AC8352C4F99AC00DD5170 /* CLI_NotifierApp.swift */,
-				347AC8372C4F99AC00DD5170 /* ContentView.swift */,
+				347AC8352C4F99AC00DD5170 /* TellerApp.swift */,
+				347AC8372C4F99AC00DD5170 /* PermissionsView.swift */,
 				347AC8392C4F99AD00DD5170 /* Assets.xcassets */,
-				347AC83E2C4F99AD00DD5170 /* CLI_Notifier.entitlements */,
+				347AC83E2C4F99AD00DD5170 /* Teller.entitlements */,
 				347AC83B2C4F99AD00DD5170 /* Preview Content */,
 			);
-			path = "CLI Notifier";
+			path = Teller;
 			sourceTree = "<group>";
 		};
 		347AC83B2C4F99AD00DD5170 /* Preview Content */ = {
@@ -97,9 +97,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		347AC8312C4F99AC00DD5170 /* CLI Notifier */ = {
+		347AC8312C4F99AC00DD5170 /* Teller */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 347AC8412C4F99AD00DD5170 /* Build configuration list for PBXNativeTarget "CLI Notifier" */;
+			buildConfigurationList = 347AC8412C4F99AD00DD5170 /* Build configuration list for PBXNativeTarget "Teller" */;
 			buildPhases = (
 				347AC82E2C4F99AC00DD5170 /* Sources */,
 				347AC82F2C4F99AC00DD5170 /* Frameworks */,
@@ -110,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = "CLI Notifier";
+			name = Teller;
 			productName = "CLI Notifier";
-			productReference = 347AC8322C4F99AC00DD5170 /* CLI Notifier.app */;
+			productReference = 347AC8322C4F99AC00DD5170 /* Teller.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +130,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 347AC82D2C4F99AC00DD5170 /* Build configuration list for PBXProject "CLI Notifier" */;
+			buildConfigurationList = 347AC82D2C4F99AC00DD5170 /* Build configuration list for PBXProject "Teller" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -143,7 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				347AC8312C4F99AC00DD5170 /* CLI Notifier */,
+				347AC8312C4F99AC00DD5170 /* Teller */,
 			);
 		};
 /* End PBXProject section */
@@ -165,8 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				347AC8382C4F99AC00DD5170 /* ContentView.swift in Sources */,
-				347AC8362C4F99AC00DD5170 /* CLI_NotifierApp.swift in Sources */,
+				347AC8382C4F99AC00DD5170 /* PermissionsView.swift in Sources */,
+				347AC8362C4F99AC00DD5170 /* TellerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,11 +297,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "CLI Notifier/CLI_Notifier.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Teller/Teller.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CLI Notifier/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Teller/Preview Content\"";
 				DEVELOPMENT_TEAM = CFJYV723M9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -313,7 +313,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shaneliesegang.CLI-Notifier";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shaneliesegang.Teller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -326,11 +326,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "CLI Notifier/CLI_Notifier.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Teller/Teller.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CLI Notifier/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Teller/Preview Content\"";
 				DEVELOPMENT_TEAM = CFJYV723M9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -342,7 +342,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shaneliesegang.CLI-Notifier";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shaneliesegang.Teller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -352,7 +352,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		347AC82D2C4F99AC00DD5170 /* Build configuration list for PBXProject "CLI Notifier" */ = {
+		347AC82D2C4F99AC00DD5170 /* Build configuration list for PBXProject "Teller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				347AC83F2C4F99AD00DD5170 /* Debug */,
@@ -361,7 +361,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		347AC8412C4F99AD00DD5170 /* Build configuration list for PBXNativeTarget "CLI Notifier" */ = {
+		347AC8412C4F99AD00DD5170 /* Build configuration list for PBXNativeTarget "Teller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				347AC8422C4F99AD00DD5170 /* Debug */,

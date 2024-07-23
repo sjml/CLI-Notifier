@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "347AC8312C4F99AC00DD5170"
-               BuildableName = "CLI Notifier.app"
-               BlueprintName = "CLI Notifier"
-               ReferencedContainer = "container:CLI Notifier.xcodeproj">
+               BuildableName = "Teller.app"
+               BlueprintName = "Teller"
+               ReferencedContainer = "container:Teller.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "347AC8312C4F99AC00DD5170"
-            BuildableName = "CLI Notifier.app"
-            BlueprintName = "CLI Notifier"
-            ReferencedContainer = "container:CLI Notifier.xcodeproj">
+            BuildableName = "Teller.app"
+            BlueprintName = "Teller"
+            ReferencedContainer = "container:Teller.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "347AC8312C4F99AC00DD5170"
-            BuildableName = "CLI Notifier.app"
-            BlueprintName = "CLI Notifier"
-            ReferencedContainer = "container:CLI Notifier.xcodeproj">
+            BuildableName = "Teller.app"
+            BlueprintName = "Teller"
+            ReferencedContainer = "container:Teller.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
