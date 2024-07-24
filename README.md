@@ -46,6 +46,6 @@ Arguments go:
 * `--message`: the body of the notification. Required.
 * `--title`: the title of the notification. Default: "Teller Notification"
 * `--delay`: floating point number of seconds to wait before popping notification. Must be greater than zero (macOS rule). Default: 0.1
-* `--sound`: optional name of system sound to play. Default: <nil>; must be one of (Basso, Blow, Bottle, Frog, Funk, Glass, Hero, Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink)
+* `--sound`: optional name of system sound to play. Default: &lt;nil&gt;; must be one of (Basso, Blow, Bottle, Frog, Funk, Glass, Hero, Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink)
 
 (The build uses Deno instead of my usual Python because, strangely enough, there are not Python libraries that can easily extract the raw PNG data from the Emoji font. I could have gone down the rabbit hole of parsing it myself but there was already a JavaScript solution and I like how Deno makes it easy to run without a whole setup. Anyway.)
