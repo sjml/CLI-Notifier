@@ -16,7 +16,9 @@ teller failure --message "Oh no, this is bad." --title "Disaster strikes!!" --so
 
 Along the lines of [`terminal-notifier`](https://github.com/julienXX/terminal-notifier/), but I wanted to see if there was some way I could get specific images to show up. `terminal-notifier` used to have functionality to pass an image path that would appear as the app icon, but that was using some private framework and [stopped working with Big Sur (macOS 11)](https://github.com/julienXX/terminal-notifier/issues/283).
 
-So this generates a set of *whole different apps*, each with its own icon to send different notifications. The [`builds.json`](./builds.json) shows how to specify emoji and labels. It also lets you set a directory to install a wrapper script to make it a little easier from the command line. Examples below. 
+Of course, like any good programmer, once I had 2 of something ("✅ success" and "❌ failure"), I wanted _N_ of that thing, so I set up this wacky build system deal with arbitrary emojis. 
+
+This generates a set of *whole different apps*, each with its own icon to send different notifications. The [`builds.json`](./builds.json) shows how to specify emoji and labels. It also lets you set a directory to install a wrapper script to make it a little easier from the command line. Examples below. 
 
 No pre-built artifacts because of codesigning and notarization. Short version: notifications require per-identifier permissions, but that means each identifier has to be registered with a developer account if it wants to do anything more than run on the machine that built it. So you gotta built these yourself. Sorry. Take it up with Apple. 
 
