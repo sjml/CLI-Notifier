@@ -48,7 +48,7 @@ struct NotificationPopper : ParsableCommand {
     var title: String = "Teller Notification"
 
     @Option(help: "delay between calling this program and the notification appearing")
-    var delay: Double = 1.0
+    var delay: Double = 0.1
 
     @Option(help: "the name of the sound to play; must be one of (\(TellerValidSounds.allValueStrings.joined(separator: ", "))), a.k.a. the ones in </System/Library/Sounds>.")
     var sound: String?

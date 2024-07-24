@@ -2,11 +2,21 @@
 
 This is extremely silly, but hey! 
 
-Trying to make a simple app that does nothing but notify success or failure from the command line. 
+Trying to make a simple app/script that does nothing but notify success or failure from the command line. 
+
+```bash
+teller success --message "We did it!" --title "Something Went Right" --sound Glass
+```
+![success](./docs/success.png)
+
+```bash
+teller failure --message "Oh no, this is bad." --title "Disaster strikes!!" --sound Basso
+```
+![success](./docs/failure.png)
 
 Along the lines of [`terminal-notifier`](https://github.com/julienXX/terminal-notifier/), but I wanted to see if there was some way I could get specific images to show up. `terminal-notifier` used to have functionality to pass an image path that would appear as the app icon, but that was using some private framework and [stopped working with Big Sur (macOS 11)](https://github.com/julienXX/terminal-notifier/issues/283).
 
-So this generates a *whole different app* with its own icon to send different notifications. The [`builds.json](./builds.json) shows how to specify emoji and labels. It also lets you set a directory to install a wrapper script to make it a little easier from the command line. Examples below. 
+So this generates a set of *whole different apps*, each with its own icon to send different notifications. The [`builds.json](./builds.json) shows how to specify emoji and labels. It also lets you set a directory to install a wrapper script to make it a little easier from the command line. Examples below. 
 
 No pre-built artifacts because of codesigning and notarization. Short version: notifications require per-identifier permissions, but that means each identifier has to be registered with a developer account if it wants to do anything more than run on the machine that built it. So you gotta built these yourself. Sorry. Take it up with Apple. 
 
@@ -22,18 +32,20 @@ Assuming you have Xcode and [Deno](https://deno.com/) installed...
    * Creates multiple "Teller" apps in the `build` directory, each one with a different icon and bundle identifier. 
 3. Run `./scripts/_install.sh`
    * Moves each of the built apps into `$HOME/Applications/tellers` and puts the wrapper script into your `usr_bin`. 
+4. The first time you run the command-line (or double-click the app and test a notification) you 
+will be prompted to approve the permissions. If the app is ad-hoc signed, you'll also get a complaint from the OS. After that, though, they should run without a hitch. (They show up in the Notifications area of your Settings app if you want to review or remove their permissions.)
 
 Then, assuming the `usr_bin` is somewhere on your $PATH, from the command line you can say:
 
-```
-teller success --message "We did it!" --title "What a Great Thing" --delay 0.1 --sound Glass
+```bash
+teller success --message "Awesome Work" --title "What a Great Thing" --delay 1.0 --sound Glass
 ```
 
 Arguments go:
 * `[label]`: which of the Teller apps to call and thus which icon will show up in the notification. Must match up with one of the labels from your `builds.json` file. (`success`, in this example)
 * `--message`: the body of the notification. Required.
 * `--title`: the title of the notification. Default: "Teller Notification"
-* `--delay`: floating point number of seconds to wait before popping notification. Must be greater than zero (macOS rule). Default: 5.0
+* `--delay`: floating point number of seconds to wait before popping notification. Must be greater than zero (macOS rule). Default: 0.1
 * `--sound`: optional name of system sound to play. Default: <nil>; must be one of (Basso, Blow, Bottle, Frog, Funk, Glass, Hero, Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink)
 
 (The build uses Deno instead of my usual Python because, strangely enough, there are not Python libraries that can easily extract the raw PNG data from the Emoji font. I could have gone down the rabbit hole of parsing it myself but there was already a JavaScript solution and I like how Deno makes it easy to run without a whole setup. Anyway.)
