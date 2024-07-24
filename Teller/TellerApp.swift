@@ -1,6 +1,6 @@
 import SwiftUI
 
-@main
+
 struct TellerApp: App {
     var body: some Scene {
         WindowGroup {
@@ -8,4 +8,3 @@ struct TellerApp: App {
         }
     }
 }
-

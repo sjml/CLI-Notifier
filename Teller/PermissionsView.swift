@@ -13,7 +13,7 @@ struct PermissionsView: View {
                     NSApp.terminate(nil)
                 }
                 Button("Show Test Notification Plz") {
-                    PopNotification(title: "\(ProcessInfo.processInfo.environment["PRODUCT_NAME"] ?? "Notification") Proudly Presents:", message: "Your content!", delay: 2.0, soundName: "Glass.aiff")
+                    PopNotification(title: "Teller Proudly Presents:", message: "Your content!", delay: 2.0, soundName: "Glass")
                 }
             }
             else {

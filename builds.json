@@ -1,4 +1,7 @@
 {
+  "usr_bin": "$HOME/bin",
+  "code_signature": "-",
+
   "builds": [
     {
       "emoji": "✅",

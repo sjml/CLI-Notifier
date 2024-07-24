@@ -1,9 +1,2 @@
-0. move notification core into library
-    - get it to take parameters
-1. get little stub exe that can call the core
-    - get params from command line
-2. rename things (no spaces, shorter name)
-3. generate new app process (see notes in build.ts)
+1. polish up the permissions GUI
 
-add note to readme explaining why the build is run with TypeScript (lol)
-    - OR port it to Python -- looks like fonttools can unpack a ttc file; can we rasterize easily though? TBD.

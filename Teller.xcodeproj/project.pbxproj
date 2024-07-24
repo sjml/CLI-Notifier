@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		345BC6FB2C503B5200A33643 /* TellerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BC6FA2C503B5200A33643 /* TellerCore.swift */; };
+		345BC7092C504B1A00A33643 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BC7082C504B1A00A33643 /* main.swift */; };
 		347AC8362C4F99AC00DD5170 /* TellerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347AC8352C4F99AC00DD5170 /* TellerApp.swift */; };
 		347AC8382C4F99AC00DD5170 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347AC8372C4F99AC00DD5170 /* PermissionsView.swift */; };
 		347AC83A2C4F99AD00DD5170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347AC8392C4F99AD00DD5170 /* Assets.xcassets */; };
 		347AC83D2C4F99AD00DD5170 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347AC83C2C4F99AD00DD5170 /* Preview Assets.xcassets */; };
+		34AF78352C50528C0041FBFE /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 34AF78342C50528C0041FBFE /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		345BC6FA2C503B5200A33643 /* TellerCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TellerCore.swift; sourceTree = "<group>"; };
+		345BC7082C504B1A00A33643 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		347AC8322C4F99AC00DD5170 /* Teller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347AC8352C4F99AC00DD5170 /* TellerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellerApp.swift; sourceTree = "<group>"; };
 		347AC8372C4F99AC00DD5170 /* PermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
@@ -44,25 +47,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34AF78352C50528C0041FBFE /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		345BC6FC2C503BE200A33643 /* Teller */ = {
-			isa = PBXGroup;
-			children = (
-				345BC6FA2C503B5200A33643 /* TellerCore.swift */,
-			);
-			path = Teller;
-			sourceTree = "<group>";
-		};
 		347AC8292C4F99AC00DD5170 = {
 			isa = PBXGroup;
 			children = (
-				345BC6FC2C503BE200A33643 /* Teller */,
-				347AC8342C4F99AC00DD5170 /* TellerApp */,
+				347AC8342C4F99AC00DD5170 /* Teller */,
 				34CAEF682C4FAC57003AEAC1 /* Frameworks */,
 				347AC8332C4F99AC00DD5170 /* Products */,
 			);
@@ -76,16 +71,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		347AC8342C4F99AC00DD5170 /* TellerApp */ = {
+		347AC8342C4F99AC00DD5170 /* Teller */ = {
 			isa = PBXGroup;
 			children = (
+				345BC7082C504B1A00A33643 /* main.swift */,
+				345BC6FA2C503B5200A33643 /* TellerCore.swift */,
 				347AC8352C4F99AC00DD5170 /* TellerApp.swift */,
 				347AC8372C4F99AC00DD5170 /* PermissionsView.swift */,
 				347AC8392C4F99AD00DD5170 /* Assets.xcassets */,
 				347AC83E2C4F99AD00DD5170 /* Teller.entitlements */,
 				347AC83B2C4F99AD00DD5170 /* Preview Content */,
 			);
-			path = TellerApp;
+			path = Teller;
 			sourceTree = "<group>";
 		};
 		347AC83B2C4F99AD00DD5170 /* Preview Content */ = {
@@ -122,6 +119,9 @@
 			dependencies = (
 			);
 			name = Teller;
+			packageProductDependencies = (
+				34AF78342C50528C0041FBFE /* ArgumentParser */,
+			);
 			productName = "CLI Notifier";
 			productReference = 347AC8322C4F99AC00DD5170 /* Teller.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 347AC8292C4F99AC00DD5170;
+			packageReferences = (
+				34AF78332C50528C0041FBFE /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 347AC8332C4F99AC00DD5170 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -178,6 +181,7 @@
 			files = (
 				345BC6FB2C503B5200A33643 /* TellerCore.swift in Sources */,
 				347AC8382C4F99AC00DD5170 /* PermissionsView.swift in Sources */,
+				345BC7092C504B1A00A33643 /* main.swift in Sources */,
 				347AC8362C4F99AC00DD5170 /* TellerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,11 +313,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TellerApp/Teller.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Teller/Teller.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TellerApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Teller/Preview Content\"";
 				DEVELOPMENT_TEAM = CFJYV723M9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -338,11 +342,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TellerApp/Teller.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Teller/Teller.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TellerApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Teller/Preview Content\"";
 				DEVELOPMENT_TEAM = CFJYV723M9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -383,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		34AF78332C50528C0041FBFE /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		34AF78342C50528C0041FBFE /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34AF78332C50528C0041FBFE /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 347AC82A2C4F99AC00DD5170 /* Project object */;
 }
