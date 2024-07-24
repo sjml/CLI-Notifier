@@ -2,14 +2,13 @@ import Foundation
 import AppKit
 import ArgumentParser
 
-
 if ProcessInfo.processInfo.environment["TERM_PROGRAM"] != nil {
 //    print("Running in terminal...")
     let authed = await AreNotificationsAuthorized()
     if !authed {
         print("Trying to request notification authorization...")
         var granted = false
-        var errText: String? = nil
+        var errText: String?
         do {
             granted = try await RequestNotificationPermissions()
         }
@@ -34,8 +33,7 @@ else {
     TellerApp.main()
 }
 
-
-struct NotificationPopper : ParsableCommand {
+struct NotificationPopper: ParsableCommand {
     static var configuration = CommandConfiguration(
         commandName: ProcessInfo.processInfo.processName,
         abstract: "pops notifications from the command line"

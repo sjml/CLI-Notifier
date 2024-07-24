@@ -33,7 +33,7 @@ func PopNotification(title: String?, message: String?, delay: Double?, soundName
             fputs("Invalid sound: \(soundId)\nMust be one of (\(TellerValidSounds.allValueStrings.joined(separator: ", ")))\n", stderr)
         }
     }
-    
+
     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay ?? 5.0, repeats: false)
     let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
     UNUserNotificationCenter.current().add(request)

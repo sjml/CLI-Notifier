@@ -27,7 +27,7 @@ No pre-built artifacts because of codesigning and notarization. Short version: n
 Assuming you have Xcode and [Deno](https://deno.com/) installed...
 
 1. Edit [`/builds.json`](./builds.json) to your liking. 
-   * `usr_bin`: sets a directory where the install script will put the `teller` wrapper. 
+   * `usr_bin`: sets a directory where the install script will put the `teller` wrapper. Will replace `$HOME` with the current user's home directory, but does no other variable substitution.
    * `code_signature`: defaults to `-`, which just gives you ad-hoc signing, no good for distribution. Put your key in here if you need to codesign more officially for whatever reason. The ad-hoc one should run just fine on the machine that built it, though every time you rebuild, it will complain; if this bothers you, put in a real signing key. 
    * `builds`: an array of objects with an `emoji` and a `label`. If you put more than one emoji in there, behavior is undefined. It works with most of the combined emojis I've tried, but who knows what the limitations might be. I keep it simple, here. 
 2. Run `./scripts/_build.sh`

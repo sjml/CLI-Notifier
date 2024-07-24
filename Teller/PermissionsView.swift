@@ -4,10 +4,10 @@ struct PermissionsView: View {
     @State var isAuthorized: Bool = false
     @State var errText: String = ""
     @State var isRequesting: Bool = false
-    
+
     var body: some View {
         VStack {
-            if (isAuthorized) {
+            if isAuthorized {
                 Text("This app is already authorized. You’re good!")
                 Button("Quit") {
                     NSApp.terminate(nil)
