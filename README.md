@@ -1,4 +1,4 @@
-# CLI Notifier
+# Teller
 
 This is extremely silly, but hey! 
 

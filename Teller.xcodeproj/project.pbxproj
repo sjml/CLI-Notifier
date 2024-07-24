@@ -122,7 +122,7 @@
 			packageProductDependencies = (
 				34AF78342C50528C0041FBFE /* ArgumentParser */,
 			);
-			productName = "CLI Notifier";
+			productName = "Teller";
 			productReference = 347AC8322C4F99AC00DD5170 /* Teller.app */;
 			productType = "com.apple.product-type.application";
 		};
