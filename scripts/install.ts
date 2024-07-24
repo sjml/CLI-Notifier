@@ -44,3 +44,16 @@ appList.forEach(app => {
 const tellerPath = path.join(jsonData.usr_bin.replace("$HOME", Deno.env.get("HOME")!), "teller");
 Deno.copyFileSync(path.join(ROOT_DIR, "scripts", "teller-wrapper.sh"), tellerPath);
 Deno.chmodSync(tellerPath, 0o755);
+
+console.log("Now going to run test notifications so you can get permissions out of the way.");
+appList.forEach(app => {
+    console.log(`    First execution of ${app}...`);
+    const instPath = path.join(INSTALL_DIR, app);
+    const runCmd = new Deno.Command(path.join(instPath, "Contents", "MacOS", "Teller"), {
+        args: [
+            "--message", `Notifications work for ${app}!`,
+            "--title", `${app.replace(/\.[^/.]+$/, "")} Notification`
+        ]
+    });
+    runCmd.outputSync();
+});
