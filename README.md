@@ -7,12 +7,12 @@ Trying to make a simple app/script that does nothing but notify success or failu
 ```bash
 teller success --message "We did it!" --title "Something Went Right" --sound Glass
 ```
-<img src="./docs/success.png" height=85 alt="a success notification">
+<img src="./docs/success.png" width="370" alt="a success notification">
 
 ```bash
 teller failure --message "Oh no, this is bad." --title "Disaster strikes!!" --sound Basso
 ```
-<img src="./docs/failure.png" height=85 alt="a failure notification">
+<img src="./docs/failure.png" width="370" alt="a failure notification">
 
 Along the lines of [`terminal-notifier`](https://github.com/julienXX/terminal-notifier/), but I wanted to see if there was some way I could get specific images to show up. `terminal-notifier` used to have functionality to pass an image path that would appear as the app icon, but that was using some private framework and [stopped working with Big Sur (macOS 11)](https://github.com/julienXX/terminal-notifier/issues/283).
 
