@@ -20,7 +20,7 @@ Of course, like any good programmer, once I had 2 of something ("✅ success" an
 
 This generates a set of *whole different apps*, each with its own icon to send different notifications. The [`builds.json`](./builds.json) shows how to specify emoji and labels. It also lets you set a directory to install a wrapper script to make it a little easier from the command line. Examples below. 
 
-No pre-built artifacts because of codesigning and notarization. Short version: notifications require per-identifier permissions, but that means each identifier has to be registered with a developer account if it wants to do anything more than run on the machine that built it. So you gotta built these yourself. Sorry. Take it up with Apple. 
+No pre-built artifacts because of codesigning and notarization. Short version: notifications require per-identifier permissions, but that means each identifier has to be registered with a developer account if it wants to do anything more than run on the machine that built it. So you gotta build these yourself. Sorry. Take it up with Apple. 
 
 ## Installation
 

@@ -13,7 +13,7 @@ struct PermissionsView: View {
                     NSApp.terminate(nil)
                 }
                 Button("Show Test Notification Plz") {
-                    PopNotification(title: "Teller Proudly Presents:", message: "Your content!", delay: 2.0, soundName: "Glass")
+                    PopNotification(title: "Teller Proudly Presents:", message: "Your content!", delay: 2.0, soundName: TellerValidSounds.Glass.rawValue)
                 }
             }
             else {

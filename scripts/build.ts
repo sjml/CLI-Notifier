@@ -1,10 +1,9 @@
 import * as path from "https://deno.land/std@0.224.0/path/mod.ts";
 import * as fs from "https://deno.land/std@0.224.0/fs/mod.ts";
 
-import * as plist from "https://esm.sh/simple-plist@1.4.0";
-
 import { extractEmoji, writeAppIconSet } from "./extractEmoji.ts";
 import { setupOutputDirectory } from "./util.ts";
+import { buildsData } from "./teller.types.ts";
 
 if (import.meta.dirname === undefined) {
     console.error("No dirname?! WTF.");
@@ -16,7 +15,7 @@ const TMP_DIR = path.join(BUILD_DIR, "tmp");
 const BASE_APP = path.join(BUILD_DIR, "Teller.app");
 
 const jsonFilepath = path.join(ROOT_DIR, "builds.json");
-let jsonData: any = {};
+let jsonData: buildsData;
 try {
     jsonData = JSON.parse(Deno.readTextFileSync(jsonFilepath));
 } catch (error) {
@@ -81,10 +80,24 @@ for (const bd of jsonData.builds) {
     fs.copySync(BASE_APP, customApp);
     fs.copySync(path.join(TMP_DIR, "assets", bd.label), path.join(customApp, "Contents", "Resources"), {overwrite: true});
 
-    const customPlist = plist.readFileSync(path.join(customApp, "Contents", "Info.plist"));
-    customPlist.CFBundleIdentifier = `${customPlist.CFBundleIdentifier}-${bd.label}`;
-    customPlist.CFBundleName = `${customPlist.CFBundleName}-${bd.label}`;
-    plist.writeFileSync(path.join(customApp, "Contents", "Info.plist"), customPlist);
+    const plistPath = path.join(customApp, "Contents", "Info.plist");
+    const decoder = new TextDecoder("utf-8");
+    ["CFBundleIdentifier", "CFBundleName"].forEach(ident => {
+        const getCmd = new Deno.Command("/usr/libexec/PlistBuddy", {
+            args: [
+                "-c", `Print ${ident}`, plistPath
+            ]
+        });
+        const output = getCmd.outputSync();
+        const baseVal = decoder.decode(output.stdout).trimEnd();
+
+        const setCmd = new Deno.Command("/usr/libexec/PlistBuddy", {
+            args: [
+                "-c", `Set ${ident} ${baseVal}-${bd.label}`, plistPath
+            ]
+        });
+        setCmd.outputSync();
+    });
 
     const signCmd = new Deno.Command("xcrun", {
         args: [
@@ -99,7 +112,7 @@ for (const bd of jsonData.builds) {
             customApp
         ]
     });
-    const output = signCmd.outputSync();
+    const _output = signCmd.outputSync();
     // console.log(new TextDecoder().decode(output.stderr));
 
     try {

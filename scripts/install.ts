@@ -2,6 +2,7 @@ import * as path from "https://deno.land/std@0.224.0/path/mod.ts";
 import * as fs from "https://deno.land/std@0.224.0/fs/mod.ts";
 
 import { setupOutputDirectory } from "./util.ts";
+import { buildsData } from "./teller.types.ts";
 
 if (import.meta.dirname === undefined) {
     console.error("No dirname?! WTF.");
@@ -16,7 +17,7 @@ const BUILD_DIR = path.join(ROOT_DIR, "build");
 const INSTALL_DIR = path.join(Deno.env.get("HOME")!, "Applications", "tellers");
 
 const jsonFilepath = path.join(ROOT_DIR, "builds.json");
-let jsonData: any = {};
+let jsonData: buildsData;
 try {
     jsonData = JSON.parse(Deno.readTextFileSync(jsonFilepath));
 } catch (error) {
